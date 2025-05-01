@@ -34,6 +34,7 @@ class TODO:
         while True:
             print(" 1.Add Task \n 2.View Task \n 3.Update Task \n 4.Delete Task \n 5.Exit")
             choice = input("Enter your choice(1-5):")
+            
             if choice == "1":
                 self.add_task()
             elif choice == "2":
