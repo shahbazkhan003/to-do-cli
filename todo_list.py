@@ -28,13 +28,14 @@ class TODO:
             self.tasks.remove(del_task)
             print(f"Delete '{del_task}' Task Successfully...\n")
         else:
-                print(f"\nTask '{del_task}' Not Found..")    
+                print(f"\nTask '{del_task}' Not Found..")  
+    @staticmethod
+    def show_menu():
+        print("\n--Welcome TO-DO-LIST App--")
+        print(" 1.Add Task \n 2.View Task \n 3.Update Task \n 4.Delete Task \n 5.Exit")  
     def run(self):
-        print("--Welcome TO-DO-LIST App--")
         while True:
-            print(" 1.Add Task \n 2.View Task \n 3.Update Task \n 4.Delete Task \n 5.Exit")
             choice = input("Enter your choice(1-5):")
-            
             if choice == "1":
                 self.add_task()
             elif choice == "2":
@@ -50,4 +51,5 @@ class TODO:
                 print("Invalid Choice")
 if __name__ == "__main__":
     s1 = TODO()
+    s1.show_menu()
     s1.run()
